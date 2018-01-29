@@ -1,13 +1,9 @@
 <?php
-/**
- * Funciones propias de los eventos
- */
 
-/**
- * 
- * @global type $conexion
- * @param type $id_evento
- */
+
+
+
+
 function eventos_detalles_lugar($id_evento) {
     global $conexion;        
     
@@ -28,4 +24,6 @@ function eventos_descripcion($id_evento, $largo) {
     return $r = substr($reg[0], 0, $largo);
 }
 
-
+function eventos_preciof($precio){
+    return $precio = ($precio <= 0 )?" <font color=\"red\">Gratis</font> ":"$precio USD"; 
+}

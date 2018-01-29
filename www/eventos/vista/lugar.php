@@ -49,7 +49,7 @@
                             
                             <?php /*<img class="card-img-top" src="http://lorempixel.com/700/400" alt="Card image cap">*/?>
                             
-                            <img class="card-img-top" src="imagenes/lugares/<?php echo "$lugares_id"; ?>.JPG" alt="Card image cap">
+                            <img class="card-img-top" src="imagenes/eventos/lugares/grandes/<?php echo "$lugares_id"; ?>.jpg" alt="Card image cap">
                             
                             
                             

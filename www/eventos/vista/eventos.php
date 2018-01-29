@@ -8,11 +8,17 @@
                 <h4 class="card-title">
                     <a href="index.php?pag=detalles&id=<?php echo "$eventos_id"; ?>"><?php echo "$eventos_titulo"; ?></a>
                 </h4>
-                <h5>$<?php echo "$eventos_precio"; ?> USD</h5>
+                
+                <p><?php echo fecha_corta($eventos_fecha_inicio); ?></p>
+                
+                <h5><?php echo eventos_preciof($eventos_precio) ?></h5>
+                
                 <p class="card-text"><?php echo eventos_descripcion($eventos_id, 100); ?></p>
             </div>
             <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <?php /*<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>*/?>
+                <?php echo categorias_segun_id($eventos_id_categoria); ?> en 
+                    <?php echo lugares_campo("ciudad", $eventos_id_lugar); ?>
             </div>
         </div>
     </div>              

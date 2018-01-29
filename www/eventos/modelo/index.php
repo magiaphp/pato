@@ -2,7 +2,7 @@
  /**  
  magia_version: 0.0.8 
  **/ 
-$comando = "SELECT * FROM eventos WHERE estatus > '0'   "; 
+$comando = "SELECT * FROM eventos WHERE estatus > '0' ORDER BY fecha_inicio   "; 
 
 //$sql=mysql_query("$comando Limit $inicia, $cfg_limite_items_en_tablas ",$conexion) 
 $sql=mysql_query("$comando Limit 0, 999 ",$conexion) 

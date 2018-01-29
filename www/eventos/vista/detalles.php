@@ -8,11 +8,11 @@
         <meta name="description" content="<?php echo "$eventos_titulo"; ?>">
         <meta name="author" content="">
         <meta name="keywords" content="Les mots clés ici">
-         <meta name="category" content="nom">
-         <meta name="robots" content="valeurs">
-         <meta name="distribution" content="valeur">
-         <meta name="Description" content="Description de votre site...">
-         <meta name="revisit-after" content="nombre">
+        <meta name="category" content="nom">
+        <meta name="robots" content="valeurs">
+        <meta name="distribution" content="valeur">
+        <meta name="Description" content="Description de votre site...">
+        <meta name="revisit-after" content="nombre">
 
         <title><?php echo "$eventos_titulo"; ?> - Mande.ec</title>
 
@@ -62,7 +62,7 @@
                                 <h3 class="card-title">
                                     <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
 
-                                    <?php echo "$eventos_fecha_inicio"; ?> / <?php echo "$eventos_precio"; ?> USD</h3>
+                                    <?php echo fecha_larga($eventos_fecha_inicio); ?> / <?php echo eventos_preciof($eventos_precio); ?></h3>
 
                                 <p class="card-text">
 

@@ -23,13 +23,13 @@
         <div class="form-group col-md-4">
             <label for="hora_inicio"><?php _t("Hora"); ?></label>
             <select id="hora_inicio" name="hora_inicio" class="form-control">
-                <?php horas_add($h); ?>              
+                <?php horas_add(date("G")*3600); ?>              
             </select>
         </div>
         <div class="form-group col-md-2">
             <label for="min_inicio"><?php _t("Min."); ?></label>
             <select id="min_inicio" name="min_inicio" class="form-control">
-                <?php min_add($m)?>              
+                <?php min_add()?>              
             </select>
         </div>
     </div>

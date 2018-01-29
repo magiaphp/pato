@@ -9,18 +9,18 @@
 
 
     <div class="my-3 p-3 bg-white rounded box-shadow">
-        <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+        <h6 class="border-bottom border-gray pb-2 mb-0">Lugares</h6>
 
 
         <?php
-        $i = 1; // cuenta lineas
+        $i = 0; // cuenta lineas
         while ($lugares = mysql_fetch_array($sql)) {
 
             include "./gestion/lugares/reg/reg.php";
 //            include "./temas/pato/www/eventos/vista/eventos.php";
             
             echo '<div class="media text-muted pt-3">
-          <img src="./imagenes/lugares/'.$lugares_id.'.jpg" alt="" class="mr-2 rounded">
+          <img src="./imagenes/eventos/lugares/medianas/'.$lugares_id.'.jpg" alt="" class="mr-2 rounded">
           <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
             <strong class="d-block text-gray-dark"><a href="index.php?pag=lugar&id='.$lugares_id.'">'.$lugares_nombre.'</a> ('.$lugares_ciudad.')</strong>
             '.$lugares_descripcion.'
@@ -48,7 +48,8 @@
 
 
 
-
+<?php 
+/*
 
 
 
@@ -118,3 +119,5 @@
     </div>
 </main>
 
+*/
+?>

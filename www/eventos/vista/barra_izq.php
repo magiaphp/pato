@@ -3,26 +3,45 @@
 <p></p>
 
 
-<form class="form-signin" action="index.php">
+<form class="form-signin" action="index.php" method="get">
+    <input type="hidden" name="pag" value="buscar">
+    
+    
 
-    <input type="hidden" name="pag" value="index">
-
+    
 
     <h1 class="h3 mb-3 font-weight-normal">Buscar</h1>
 
-    <label for="inputEmail" class="sr-only">Que buscas?</label>
-    <input type="text" id="inputEmail" class="form-control" placeholder="Actividad" required autofocus>
 
-    <label for="inputPassword" class="sr-only">Donde?</label>
-    <input type="text" id="inputPassword" class="form-control" placeholder="Donde" required>        
+    <label for="donde" class="sr-only">Donde?</label>
+    <input type="text" id="donde" name="donde" class="form-control" placeholder="Donde" required>        
+
+
+
+    <label for="inputEmail" class="sr-only">Que buscas?</label>
+    <select class="form-control" name="id_categoria" id="id_categoria">
+        <?php categorias_add(); ?>
+    </select>
+
+
+
 
     <label for="inputPassword" class="sr-only">Fecha?</label>
-    <input type="text" id="inputPassword" class="form-control" placeholder="Fecha" required>
+    
+    <select class="form-control" name="cuando" id="cuando">
+        <option value="0">Hoy, <?php echo fecha_corta(hoy()); ?></option>
+        <option value="0">Mañana, <?php echo fecha_corta(manana()); ?></option>        
+        <option value="7">Prox. 7 dias</option>
+        <option value="15">Prox. 15 dias</option>
+        <option value="30">Prox. 30 dias</option>        
+        <option value="0">Todos</option>        
+                
+    </select>    
 
 
     <div class="checkbox mb-3">
         <label>
-            <input type="checkbox" value="remember-me"> Solo gratis
+            <input type="checkbox" name="sologratis" value="si"> Solo gratis
         </label>
     </div>
 
@@ -30,6 +49,10 @@
     <button class="btn btn-lg btn-primary btn-block" type="submit">Buscar</button>
 
 </form>
+
+
+
+
 
 <h3 class="my-4">Lugares</h3>
 
