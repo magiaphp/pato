@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="<?php echo "$eventos_titulo"; ?>">
@@ -13,48 +11,37 @@
         <meta name="distribution" content="valeur">
         <meta name="Description" content="Description de votre site...">
         <meta name="revisit-after" content="nombre">
-
         <title><?php echo "$eventos_titulo"; ?> - Mande.ec</title>
-
-
         <?php
         include "css.php";
         ?>
-
     </head>
-
     <body>
-
         <?php
         include "menu.php";
         ?>
-
         <!-- Page Content -->
         <div class="container">
-
             <div class="row">
-
                 <div class="col-lg-3">
-
                     <?php
                     include "barra_izq.php";
                     ?>
-
                 </div>
                 <!-- /.col-lg-3 -->
-
                 <div class="col-lg-9">
-
                     <p></p>
-
-
                     <div class="row">
-
-
-
                         <div class="card mb-4">
-                            <?php /* <img class="card-img-top" src="http://lorempixel.com/700/401" alt="Card image cap"> */ ?>
-                            <img class="card-img-top" src="imagenes/eventos/<?php echo "$eventos_id"; ?>.jpg" alt="Card image cap"> 
+                            
+                            <?php 
+                            if( ! file_exists("imagenes/eventos/$eventos_id.jpg")){ ?>
+                                <img class="card-img-top" src="http://lorempixel.com/700/401" alt="Card image cap"> 
+                            <?php } else { ?>
+                                <img class="card-img-top" src="imagenes/eventos/<?php echo "$eventos_id"; ?>.jpg" alt="Card image cap"> 
+                            <?php } ?>
+                            
+                            
                             <div class="card-body">
                                 <h2 class="card-title"><?php echo "$eventos_titulo"; ?></h2>
                                 <p><?php echo categorias_segun_id($eventos_id_categoria); ?></p>
@@ -73,7 +60,8 @@
 
                             </div>                           
                             <?php
-                            eventos_detalles_lugar($eventos_id);
+                            
+                            eventos_detalles_lugar($eventos_id_lugar);
                             ?>
                         </div>
                     </div> 

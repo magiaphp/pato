@@ -41,62 +41,81 @@
                     <?php
                     include "carrusel.php";
                     ?>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
 
-                    
-                    
+
+
+
+
+
+
+
+
+
+
                     <div class="row">
+                        <div class="col-lg-12">
+
+                            <form class="form-inline" action="index.php" method="get">
+                                <input type="hidden" name="pag" value="buscar" >
+                                
+                                <div class="form-row align-items-center">      
+                                    <div class="col-auto">
+                                        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <select class="form-control" name="d">
+                                                        <option value="eventos"><?php _t("Eventos"); ?></option>
+                                                        
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" id="b" name="b" placeholder="">
+                                        </div>
+                                    </div>
 
 
+                                    <div class="col-auto">
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="gratis" name="sologratis" value="si">
+                                            <label class="form-check-label" for="gratis">
+                                                <?php _t("solo gratis"); ?>
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-primary mb-2"><?php _t("Buscar"); ?></button>
+                                    </div>            
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="row">
                         <?php
                         $i = 1; // cuenta lineas
                         while ($eventos = mysql_fetch_array($sql)) {
-
                             include "./gestion/eventos/reg/reg.php";
                             include "./temas/pato/www/eventos/vista/eventos.php";
-
-                            
-
-                          
-                            
-
                             $i++;
                         }
-
-
-
-
-                        include "eventos.php";
+                        //include "eventos.php";
                         ?>
-
-
-
-
-
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Item Six</a>
-                                    </h4>
-                                    <h5>$24.99</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+
+
+
+
                     <!-- /.row -->
 
                 </div>
@@ -108,9 +127,9 @@
         </div>
         <!-- /.container -->
 
-<?php 
-include "footer.php"; 
-?>
+        <?php
+        include "footer.php";
+        ?>
 
 
         <script src="includes/bootstrap-400/js/bootstrap.min.js" type="text/javascript"></script>

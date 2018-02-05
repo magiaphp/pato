@@ -2,7 +2,8 @@
 
 <p></p>
 
-
+<?php 
+/*
 <form class="form-signin" action="index.php" method="get">
     <input type="hidden" name="pag" value="buscar">
     
@@ -51,22 +52,22 @@
 </form>
 
 
-
-
-
-<h3 class="my-4">Lugares</h3>
-
-
-<?php
-lugares_lista();
-?>    
-<h3 class="my-4">Ciudades</h3>
-<?php 
-lugares_ciudades(); 
+*/
 ?>
 <h3 class="my-4">Categorias</h3>
 <?php 
     categorias(); 
+?>
+
+
+<h3 class="my-4">Lugares</h3>
+<?php
+lugares_lista();
+?>    
+
+<h3 class="my-4">Ciudades</h3>
+<?php 
+lugares_ciudades(); 
 ?>
 
 

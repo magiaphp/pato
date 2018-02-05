@@ -11,8 +11,8 @@
         <title>Web- Start Bootstrap Template</title>
 
 
-        <?php 
-        include "css.php"; 
+        <?php
+        include "css.php";
         ?>
     </head>
 
@@ -39,22 +39,23 @@
                 <div class="col-lg-9">
 
                     <?php
-                   include "carrusel.php";
+                    include "carrusel.php";
                     ?>
 
+                    <h1><?php _t("Registro de una actividad"); ?></h1>
+
+
+                    <hr>
+
                     <div class="row">
-
-                       
-
-                        <?php 
-                        include "registrar_actividad_lugar.php"; 
-                        ?>
-
-
-
-                        
-
+                        <div class="col-lg-12">
+                            <?php
+                            include "registrar_actividad_lugar.php";
+                            ?>   
+                        </div>                     
                     </div>
+
+
                     <!-- /.row -->
 
                 </div>
@@ -66,9 +67,9 @@
         </div>
         <!-- /.container -->
 
-       <?php 
-include "footer.php"; 
-?>
+        <?php
+        include "footer.php";
+        ?>
 
 
         <script src="includes/bootstrap-400/js/bootstrap.min.js" type="text/javascript"></script>

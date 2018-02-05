@@ -3,7 +3,7 @@
 
     <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100">
-            <a href="index.php?pag=detalles"><img class="card-img-top" src="http://lorempixel.com/700/40<?php echo $i; ?>" alt=""></a>
+            <a href="index.php?pag=detalles&id=<?php echo "$eventos_id"; ?>"><img class="card-img-top" src="http://lorempixel.com/700/40<?php echo $i; ?>" alt=""></a>
             <div class="card-body">
                 <h4 class="card-title">
                     <a href="index.php?pag=detalles&id=<?php echo "$eventos_id"; ?>"><?php echo "$eventos_titulo"; ?></a>

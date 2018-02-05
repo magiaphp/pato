@@ -44,12 +44,12 @@
 
                     <div class="row">
 
-                        <div class="col-lg-12">
+
 
                         <?php
                         include "registrar_lugar_lugar.php";
                         ?>
-                        </div>
+
 
 
 
